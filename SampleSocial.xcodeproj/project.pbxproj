@@ -56,6 +56,7 @@
 			children = (
 				ACE067511F168928007FDC15 /* SampleSocial */,
 				ACE067501F168928007FDC15 /* Products */,
+				ACE067691F168F6F007FDC15 /* Resources */,
 				1385646407B254B04ED5BDFE /* Pods */,
 				DB2021CAE016BA298553B3BA /* Frameworks */,
 			);
@@ -75,10 +76,6 @@
 				ACE067681F168BAE007FDC15 /* Model */,
 				ACE067671F168BA6007FDC15 /* View */,
 				ACE067661F168B9E007FDC15 /* Controller */,
-				ACE067591F168928007FDC15 /* Assets.xcassets */,
-				ACE0675B1F168928007FDC15 /* LaunchScreen.storyboard */,
-				ACE0675E1F168928007FDC15 /* Info.plist */,
-				ACE067641F16898E007FDC15 /* GoogleService-Info.plist */,
 			);
 			path = SampleSocial;
 			sourceTree = "<group>";
@@ -86,6 +83,7 @@
 		ACE067661F168B9E007FDC15 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ACE0675B1F168928007FDC15 /* LaunchScreen.storyboard */,
 				ACE067561F168928007FDC15 /* Main.storyboard */,
 				ACE067521F168928007FDC15 /* AppDelegate.swift */,
 				ACE067541F168928007FDC15 /* SignInVC.swift */,
@@ -105,6 +103,17 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		ACE067691F168F6F007FDC15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACE067641F16898E007FDC15 /* GoogleService-Info.plist */,
+				ACE0675E1F168928007FDC15 /* Info.plist */,
+				ACE067591F168928007FDC15 /* Assets.xcassets */,
+			);
+			name = Resources;
+			path = SampleSocial;
 			sourceTree = "<group>";
 		};
 		DB2021CAE016BA298553B3BA /* Frameworks */ = {
