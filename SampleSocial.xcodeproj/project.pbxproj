@@ -13,6 +13,10 @@
 		ACE0675A1F168928007FDC15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE067591F168928007FDC15 /* Assets.xcassets */; };
 		ACE0675D1F168928007FDC15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE0675B1F168928007FDC15 /* LaunchScreen.storyboard */; };
 		ACE067651F16898E007FDC15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACE067641F16898E007FDC15 /* GoogleService-Info.plist */; };
+		ACE0676B1F17E175007FDC15 /* Florentia-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACE0676A1F17E175007FDC15 /* Florentia-Regular.ttf */; };
+		ACE0676D1F17E189007FDC15 /* Florentia-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACE0676C1F17E189007FDC15 /* Florentia-Black.ttf */; };
+		ACE0676F1F17E1D5007FDC15 /* Florentia-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACE0676E1F17E1D5007FDC15 /* Florentia-Medium.ttf */; };
+		ACE067711F18001D007FDC15 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE067701F18001D007FDC15 /* CircleButton.swift */; };
 		F5DC54553144F9E0B93699CB /* Pods_SampleSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E547664C491B526615A00E2B /* Pods_SampleSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +30,10 @@
 		ACE0675C1F168928007FDC15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACE0675E1F168928007FDC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACE067641F16898E007FDC15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ACE0676A1F17E175007FDC15 /* Florentia-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Florentia-Regular.ttf"; sourceTree = "<group>"; };
+		ACE0676C1F17E189007FDC15 /* Florentia-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Florentia-Black.ttf"; sourceTree = "<group>"; };
+		ACE0676E1F17E1D5007FDC15 /* Florentia-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Florentia-Medium.ttf"; sourceTree = "<group>"; };
+		ACE067701F18001D007FDC15 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		C83F138302B0D1AA5F528459 /* Pods-SampleSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleSocial/Pods-SampleSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		E547664C491B526615A00E2B /* Pods_SampleSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,10 +91,10 @@
 		ACE067661F168B9E007FDC15 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ACE0675B1F168928007FDC15 /* LaunchScreen.storyboard */,
 				ACE067561F168928007FDC15 /* Main.storyboard */,
 				ACE067521F168928007FDC15 /* AppDelegate.swift */,
 				ACE067541F168928007FDC15 /* SignInVC.swift */,
+				ACE0675B1F168928007FDC15 /* LaunchScreen.storyboard */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 		ACE067671F168BA6007FDC15 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ACE067701F18001D007FDC15 /* CircleButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -108,6 +117,9 @@
 		ACE067691F168F6F007FDC15 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ACE0676A1F17E175007FDC15 /* Florentia-Regular.ttf */,
+				ACE0676C1F17E189007FDC15 /* Florentia-Black.ttf */,
+				ACE0676E1F17E1D5007FDC15 /* Florentia-Medium.ttf */,
 				ACE067641F16898E007FDC15 /* GoogleService-Info.plist */,
 				ACE0675E1F168928007FDC15 /* Info.plist */,
 				ACE067591F168928007FDC15 /* Assets.xcassets */,
@@ -187,10 +199,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE0676B1F17E175007FDC15 /* Florentia-Regular.ttf in Resources */,
 				ACE0675D1F168928007FDC15 /* LaunchScreen.storyboard in Resources */,
+				ACE0676F1F17E1D5007FDC15 /* Florentia-Medium.ttf in Resources */,
 				ACE067651F16898E007FDC15 /* GoogleService-Info.plist in Resources */,
 				ACE0675A1F168928007FDC15 /* Assets.xcassets in Resources */,
 				ACE067581F168928007FDC15 /* Main.storyboard in Resources */,
+				ACE0676D1F17E189007FDC15 /* Florentia-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE067711F18001D007FDC15 /* CircleButton.swift in Sources */,
 				ACE067551F168928007FDC15 /* SignInVC.swift in Sources */,
 				ACE067531F168928007FDC15 /* AppDelegate.swift in Sources */,
 			);
