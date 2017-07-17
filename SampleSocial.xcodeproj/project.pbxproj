@@ -31,6 +31,7 @@
 		ACD0C0BD1F18E53E00408653 /* FacebookImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookImageView.swift; sourceTree = "<group>"; };
 		ACD0C0BF1F1CE7C100408653 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		ACD0C0C11F1CEA0000408653 /* CustomSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSignIn.swift; sourceTree = "<group>"; };
+		ACD0C0C61F1D556B00408653 /* SampleSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleSocial.entitlements; sourceTree = "<group>"; };
 		ACE0674F1F168928007FDC15 /* SampleSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE067521F168928007FDC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE067541F168928007FDC15 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 		ACE067511F168928007FDC15 /* SampleSocial */ = {
 			isa = PBXGroup;
 			children = (
+				ACD0C0C61F1D556B00408653 /* SampleSocial.entitlements */,
 				ACE067681F168BAE007FDC15 /* Model */,
 				ACE067671F168BA6007FDC15 /* View */,
 				ACE067661F168B9E007FDC15 /* Controller */,
@@ -196,6 +198,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = K54W26DX5J;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -418,6 +425,7 @@
 			baseConfigurationReference = C83F138302B0D1AA5F528459 /* Pods-SampleSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SampleSocial/SampleSocial.entitlements;
 				DEVELOPMENT_TEAM = K54W26DX5J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -436,6 +444,7 @@
 			baseConfigurationReference = 73A60E6B91CB24D0217A643E /* Pods-SampleSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SampleSocial/SampleSocial.entitlements;
 				DEVELOPMENT_TEAM = K54W26DX5J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -39,19 +39,22 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
-    
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb456202134754614</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>456202134754614</string>
-    <key>FacebookDisplayName</key>
-    <string>Social Place</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb456202134754614</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>456202134754614</string>
+	<key>FacebookDisplayName</key>
+	<string>Social Place</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
 </dict>
 </plist>
