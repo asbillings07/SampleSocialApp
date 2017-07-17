@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACD0C0BC1F18175800408653 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C0BB1F18175800408653 /* Constants.swift */; };
+		ACD0C0BE1F18E53E00408653 /* FacebookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C0BD1F18E53E00408653 /* FacebookImageView.swift */; };
+		ACD0C0C01F1CE7C100408653 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C0BF1F1CE7C100408653 /* CustomTextField.swift */; };
+		ACD0C0C21F1CEA0000408653 /* CustomSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C0C11F1CEA0000408653 /* CustomSignIn.swift */; };
 		ACE067531F168928007FDC15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE067521F168928007FDC15 /* AppDelegate.swift */; };
 		ACE067551F168928007FDC15 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE067541F168928007FDC15 /* SignInVC.swift */; };
 		ACE067581F168928007FDC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE067561F168928007FDC15 /* Main.storyboard */; };
@@ -17,11 +21,16 @@
 		ACE0676D1F17E189007FDC15 /* Florentia-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACE0676C1F17E189007FDC15 /* Florentia-Black.ttf */; };
 		ACE0676F1F17E1D5007FDC15 /* Florentia-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACE0676E1F17E1D5007FDC15 /* Florentia-Medium.ttf */; };
 		ACE067711F18001D007FDC15 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE067701F18001D007FDC15 /* CircleButton.swift */; };
+		ACE067731F180EEC007FDC15 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE067721F180EEC007FDC15 /* TopView.swift */; };
 		F5DC54553144F9E0B93699CB /* Pods_SampleSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E547664C491B526615A00E2B /* Pods_SampleSocial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		73A60E6B91CB24D0217A643E /* Pods-SampleSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleSocial/Pods-SampleSocial.release.xcconfig"; sourceTree = "<group>"; };
+		ACD0C0BB1F18175800408653 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ACD0C0BD1F18E53E00408653 /* FacebookImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookImageView.swift; sourceTree = "<group>"; };
+		ACD0C0BF1F1CE7C100408653 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		ACD0C0C11F1CEA0000408653 /* CustomSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSignIn.swift; sourceTree = "<group>"; };
 		ACE0674F1F168928007FDC15 /* SampleSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE067521F168928007FDC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE067541F168928007FDC15 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -34,6 +43,7 @@
 		ACE0676C1F17E189007FDC15 /* Florentia-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Florentia-Black.ttf"; sourceTree = "<group>"; };
 		ACE0676E1F17E1D5007FDC15 /* Florentia-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Florentia-Medium.ttf"; sourceTree = "<group>"; };
 		ACE067701F18001D007FDC15 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		ACE067721F180EEC007FDC15 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		C83F138302B0D1AA5F528459 /* Pods-SampleSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleSocial/Pods-SampleSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		E547664C491B526615A00E2B /* Pods_SampleSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -57,6 +67,14 @@
 				73A60E6B91CB24D0217A643E /* Pods-SampleSocial.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		ACD0C0BA1F18173D00408653 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				ACD0C0BB1F18175800408653 /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		ACE067461F168927007FDC15 = {
@@ -84,6 +102,7 @@
 				ACE067681F168BAE007FDC15 /* Model */,
 				ACE067671F168BA6007FDC15 /* View */,
 				ACE067661F168B9E007FDC15 /* Controller */,
+				ACD0C0BA1F18173D00408653 /* Util */,
 			);
 			path = SampleSocial;
 			sourceTree = "<group>";
@@ -103,6 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				ACE067701F18001D007FDC15 /* CircleButton.swift */,
+				ACE067721F180EEC007FDC15 /* TopView.swift */,
+				ACD0C0BD1F18E53E00408653 /* FacebookImageView.swift */,
+				ACD0C0BF1F1CE7C100408653 /* CustomTextField.swift */,
+				ACD0C0C11F1CEA0000408653 /* CustomSignIn.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -264,8 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD0C0C21F1CEA0000408653 /* CustomSignIn.swift in Sources */,
+				ACD0C0C01F1CE7C100408653 /* CustomTextField.swift in Sources */,
+				ACD0C0BC1F18175800408653 /* Constants.swift in Sources */,
 				ACE067711F18001D007FDC15 /* CircleButton.swift in Sources */,
 				ACE067551F168928007FDC15 /* SignInVC.swift in Sources */,
+				ACE067731F180EEC007FDC15 /* TopView.swift in Sources */,
+				ACD0C0BE1F18E53E00408653 /* FacebookImageView.swift in Sources */,
 				ACE067531F168928007FDC15 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

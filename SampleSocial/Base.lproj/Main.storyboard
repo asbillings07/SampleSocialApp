@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Florentia-Medium.ttf">
+            <string>Florentia-Medium</string>
+        </array>
         <array key="Florentia-Regular.ttf">
             <string>Florentia-Regular</string>
         </array>
@@ -24,33 +27,32 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCU-s6-GLS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCU-s6-GLS" customClass="TopView" customModule="SampleSocial" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SP Logo" translatesAutoresizingMaskIntoConstraints="NO" id="HBc-Lf-k2f">
-                                        <rect key="frame" x="108.5" y="7" width="158" height="85"/>
+                                        <rect key="frame" x="97.5" y="20" width="125" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="158" id="ilI-A4-eZm"/>
-                                            <constraint firstAttribute="height" constant="85" id="j2j-p0-i5K"/>
+                                            <constraint firstAttribute="width" constant="125" id="ilI-A4-eZm"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="YEf-Jr-DIY"/>
-                                    <constraint firstAttribute="bottom" secondItem="HBc-Lf-k2f" secondAttribute="bottom" constant="8" id="hed-9e-KNR"/>
-                                    <constraint firstItem="HBc-Lf-k2f" firstAttribute="centerX" secondItem="WCU-s6-GLS" secondAttribute="centerX" id="kYA-cg-Yzf"/>
-                                    <constraint firstItem="HBc-Lf-k2f" firstAttribute="top" secondItem="WCU-s6-GLS" secondAttribute="top" constant="7" id="sIH-X6-18W"/>
+                                    <constraint firstAttribute="height" constant="125" id="YEf-Jr-DIY"/>
+                                    <constraint firstAttribute="bottom" secondItem="HBc-Lf-k2f" secondAttribute="bottom" constant="5" id="hed-9e-KNR"/>
+                                    <constraint firstItem="HBc-Lf-k2f" firstAttribute="centerX" secondItem="WCU-s6-GLS" secondAttribute="centerX" id="ip6-ug-Xgh"/>
+                                    <constraint firstItem="HBc-Lf-k2f" firstAttribute="top" secondItem="WCU-s6-GLS" secondAttribute="top" constant="20" id="sIH-X6-18W"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNx-IR-4MQ">
-                                <rect key="frame" x="0.0" y="602" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="503" width="320" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If this is your first time signing in we will automatically create an account for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmf-rO-3oc">
-                                        <rect key="frame" x="8" y="8" width="359" height="49"/>
+                                        <rect key="frame" x="8" y="8" width="304" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="ZJw-f2-FLY"/>
                                         </constraints>
@@ -68,46 +70,23 @@
                                     <constraint firstAttribute="bottom" secondItem="Vmf-rO-3oc" secondAttribute="bottom" constant="8" id="uuq-yn-YBp"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a sign-in method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrE-Ec-jKV">
-                                <rect key="frame" x="26" y="120" width="323" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="p34-9Q-RUz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Florentia-Regular" family="Florentia" pointSize="19"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54181827910958902" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWm-80-s7o" customClass="CircleButton" customModule="SampleSocial" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="207" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.32123604416847229" green="0.44730252027511597" blue="0.70247524976730347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="foX-M1-Jq4"/>
-                                    <constraint firstAttribute="width" constant="100" id="q8K-af-ZrA"/>
-                                </constraints>
-                                <state key="normal" image="f"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="50"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gTf-K2-Aov">
-                                <rect key="frame" x="36" y="412" width="303" height="114"/>
+                                <rect key="frame" x="36" y="381" width="248" height="114"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email Address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3GC-2K-m3c">
-                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email Address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3GC-2K-m3c" customClass="CustomTextField" customModule="SampleSocial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.37968214897260272" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Florentia-Regular" family="Florentia" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="Florentia-Regular" family="Florentia" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nOq-PJ-6Qo">
-                                        <rect key="frame" x="0.0" y="40" width="303" height="30"/>
+                                        <rect key="frame" x="0.0" y="40" width="248" height="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.38334760270136997" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Florentia-Regular" family="Florentia" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="Florentia-Regular" family="Florentia" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="continue" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGa-sm-1QX">
-                                        <rect key="frame" x="0.0" y="80" width="303" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGa-sm-1QX" customClass="CustomSignIn" customModule="SampleSocial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="80" width="248" height="34"/>
                                         <color key="backgroundColor" red="1" green="0.3411764705882353" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Florentia-Regular" family="Florentia" pointSize="18"/>
                                         <state key="normal" title="Sign In">
@@ -116,27 +95,86 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f" translatesAutoresizingMaskIntoConstraints="NO" id="vG4-5U-WfA" customClass="FacebookImageView" customModule="SampleSocial" customModuleProvider="target">
+                                <rect key="frame" x="110" y="169" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.32123604420000001" green="0.44730252030000001" blue="0.70247524979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Oq3-CF-F8Z"/>
+                                    <constraint firstAttribute="height" constant="100" id="V1o-Wh-nec"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-GK-QeN">
+                                <rect key="frame" x="152.5" y="312" width="15" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Florentia-Regular" family="Florentia" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54478809931780825" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with Email &amp; Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cj-rt-wHl">
+                                <rect key="frame" x="68" y="350" width="184" height="15"/>
+                                <fontDescription key="fontDescription" name="Florentia-Regular" family="Florentia" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.52771832192054802" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a sign-in method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrE-Ec-jKV">
+                                <rect key="frame" x="26" y="140" width="268" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="p34-9Q-RUz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Florentia-Regular" family="Florentia" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54181827910958902" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxu-Ks-Nkm">
+                                <rect key="frame" x="110" y="274" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.10196078431372549" green="0.13725490196078433" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kqT-1Q-Ct3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Florentia-Medium" family="Florentia" pointSize="9"/>
+                                <state key="normal" title="Login with facebook">
+                                    <color key="titleColor" red="0.98688481289999996" green="1" blue="0.98631391869999996" alpha="0.74566566780821919" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WCU-s6-GLS" secondAttribute="trailing" id="0Ai-eC-uiY"/>
                             <constraint firstItem="gTf-K2-Aov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0MF-iX-wWa"/>
-                            <constraint firstItem="tWm-80-s7o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="121.5" id="5RQ-hP-uab"/>
+                            <constraint firstItem="vG4-5U-WfA" firstAttribute="top" secondItem="ZrE-Ec-jKV" secondAttribute="bottom" constant="8" id="1KH-op-RPK">
+                                <variation key="heightClass=regular" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="Nxu-Ks-Nkm" firstAttribute="top" secondItem="vG4-5U-WfA" secondAttribute="bottom" constant="2" id="1ye-Xq-Fjv">
+                                <variation key="heightClass=regular" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="vG4-5U-WfA" firstAttribute="top" secondItem="ZrE-Ec-jKV" secondAttribute="bottom" constant="8" id="3k7-Rg-id2">
+                                <variation key="heightClass=regular" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="vG4-5U-WfA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5LG-Lr-v0U"/>
                             <constraint firstItem="WCU-s6-GLS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5yq-9e-nqi"/>
-                            <constraint firstItem="tWm-80-s7o" firstAttribute="top" secondItem="ZrE-Ec-jKV" secondAttribute="bottom" constant="66" id="GIt-pk-NDI"/>
+                            <constraint firstItem="gTf-K2-Aov" firstAttribute="top" secondItem="5Cj-rt-wHl" secondAttribute="bottom" constant="16" id="BfK-ZA-pH9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Cj-rt-wHl" secondAttribute="trailing" constant="52" id="CHm-y1-TOE"/>
+                            <constraint firstItem="5Cj-rt-wHl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="52" id="FPb-iG-6nX"/>
                             <constraint firstItem="gTf-K2-Aov" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="HXl-Jg-a3v"/>
+                            <constraint firstItem="Nxu-Ks-Nkm" firstAttribute="trailing" secondItem="vG4-5U-WfA" secondAttribute="trailing" id="IaQ-JG-v4Y"/>
+                            <constraint firstItem="Nxu-Ks-Nkm" firstAttribute="leading" secondItem="vG4-5U-WfA" secondAttribute="leading" id="LgK-nR-4x4"/>
                             <constraint firstItem="WCU-s6-GLS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lr2-IL-you"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZrE-Ec-jKV" secondAttribute="trailing" constant="10" id="Ncj-5m-cZ4"/>
-                            <constraint firstItem="tWm-80-s7o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uef-b1-VqC"/>
+                            <constraint firstItem="LaJ-GK-QeN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XN5-4Y-16l"/>
                             <constraint firstAttribute="trailing" secondItem="mNx-IR-4MQ" secondAttribute="trailing" id="Y81-ed-Lr3"/>
-                            <constraint firstItem="gTf-K2-Aov" firstAttribute="top" secondItem="tWm-80-s7o" secondAttribute="bottom" constant="105" id="YYw-JV-xRu"/>
                             <constraint firstItem="mNx-IR-4MQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yc1-Wk-Hv9"/>
-                            <constraint firstItem="gTf-K2-Aov" firstAttribute="top" secondItem="tWm-80-s7o" secondAttribute="bottom" constant="105" id="aDm-mQ-Yb6"/>
-                            <constraint firstItem="tWm-80-s7o" firstAttribute="top" secondItem="ZrE-Ec-jKV" secondAttribute="bottom" constant="66" id="b7M-ZW-p5U"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gTf-K2-Aov" secondAttribute="trailing" constant="20" id="crc-yf-QhN"/>
-                            <constraint firstItem="ZrE-Ec-jKV" firstAttribute="top" secondItem="WCU-s6-GLS" secondAttribute="bottom" constant="20" id="gDe-8S-mN0"/>
+                            <constraint firstItem="5Cj-rt-wHl" firstAttribute="top" secondItem="LaJ-GK-QeN" secondAttribute="bottom" constant="20.5" id="g8Y-6e-c10"/>
+                            <constraint firstItem="ZrE-Ec-jKV" firstAttribute="top" secondItem="WCU-s6-GLS" secondAttribute="bottom" constant="18" id="gDe-8S-mN0">
+                                <variation key="heightClass=regular" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="5Cj-rt-wHl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jKh-pH-Yii"/>
+                            <constraint firstItem="mNx-IR-4MQ" firstAttribute="top" secondItem="gTf-K2-Aov" secondAttribute="bottom" constant="8" id="lHU-Re-ekg"/>
                             <constraint firstItem="ZrE-Ec-jKV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q5p-dL-NVI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tWm-80-s7o" secondAttribute="trailing" constant="121.5" id="rBt-dh-acN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mNx-IR-4MQ" secondAttribute="bottom" id="uHe-9S-Ryr"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -148,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+            <point key="canvasLocation" x="24.375" y="34.859154929577464"/>
         </scene>
     </scenes>
     <resources>
