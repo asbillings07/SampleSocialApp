@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Florentia-Black.ttf">
+            <string>Florentia-Black</string>
+        </array>
         <array key="Florentia-Medium.ttf">
             <string>Florentia-Medium</string>
         </array>
@@ -213,23 +216,106 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTa-jO-Yj9">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTa-jO-Yj9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="0.01191110909" green="0.7270975113" blue="0.96945434809999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Social Place" id="AhM-WX-5ED">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="vTy-hG-IZs"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="vTy-hG-IZs">
+                                            <connections>
+                                                <action selector="backBtnPressed:" destination="AXs-oz-FF3" id="LRb-hV-GBx"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your username in order to reset your password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIh-eW-NXW">
+                                <rect key="frame" x="23" y="74" width="275" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="01Z-wl-fQ0"/>
+                                    <constraint firstAttribute="height" constant="69" id="xOT-Tf-9iE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Florentia-Regular" family="Florentia" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="0.71224850171232879" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D6r-2V-Edm">
+                                <rect key="frame" x="53" y="151" width="226" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRb-Yo-FbN">
+                                <rect key="frame" x="53" y="189" width="226" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitPwResetPressed:" destination="AXs-oz-FF3" eventType="touchUpInside" id="9W9-Xv-Vka"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password Successfully Sent, check your email" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLY-Px-f44">
+                                <rect key="frame" x="53" y="353" width="218" height="58"/>
+                                <fontDescription key="fontDescription" name="Florentia-Black" family="Florentia" pointSize="17"/>
+                                <color key="textColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="0.9079890839041096" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-aU-rnB">
+                                <rect key="frame" x="53" y="419" width="218" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="pru-LO-hMB"/>
+                                    <constraint firstAttribute="width" constant="218" id="uhy-U0-5im"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Florentia-Black" family="Florentia" pointSize="17"/>
+                                <color key="textColor" red="0.95686274509803915" green="0.2627450980392157" blue="0.21176470588235294" alpha="0.78138377568493156" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Once you enter your email adress you will recieve an email with instructions on resetting your password." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zt5-Zc-aDl">
+                                <rect key="frame" x="35" y="246" width="250" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="VTp-Hf-qCY"/>
+                                    <constraint firstAttribute="height" constant="99" id="dLl-U7-yRO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Florentia-Regular" family="Florentia" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="0.71147260273972601" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zt5-Zc-aDl" secondAttribute="trailing" constant="19" id="41N-jA-3xt"/>
+                            <constraint firstItem="DIh-eW-NXW" firstAttribute="leading" secondItem="Zfu-QE-XMW" secondAttribute="leadingMargin" constant="6.5" id="4tq-fw-g4K"/>
+                            <constraint firstItem="cTa-jO-Yj9" firstAttribute="centerX" secondItem="DIh-eW-NXW" secondAttribute="centerX" id="8ES-uu-WxR"/>
+                            <constraint firstItem="D6r-2V-Edm" firstAttribute="top" secondItem="DIh-eW-NXW" secondAttribute="bottom" constant="8" symbolic="YES" id="8WN-84-rTR"/>
+                            <constraint firstItem="RMu-B5-SE6" firstAttribute="top" secondItem="fLY-Px-f44" secondAttribute="bottom" constant="157" id="9DD-CS-Nlf"/>
+                            <constraint firstItem="cTa-jO-Yj9" firstAttribute="top" secondItem="Zfu-QE-XMW" secondAttribute="top" id="Erp-DI-jtu"/>
+                            <constraint firstItem="ncc-aU-rnB" firstAttribute="top" secondItem="fLY-Px-f44" secondAttribute="bottom" constant="8" id="Sdl-zL-Pub"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ncc-aU-rnB" secondAttribute="trailing" constant="33" id="Wls-yG-9c2"/>
+                            <constraint firstItem="DRb-Yo-FbN" firstAttribute="top" secondItem="D6r-2V-Edm" secondAttribute="bottom" constant="8" symbolic="YES" id="Z88-Cl-ZDl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fLY-Px-f44" secondAttribute="trailing" constant="33" id="bkT-VW-sbI"/>
+                            <constraint firstItem="fLY-Px-f44" firstAttribute="leading" secondItem="DRb-Yo-FbN" secondAttribute="leading" id="exf-Ij-Qxl"/>
+                            <constraint firstItem="DIh-eW-NXW" firstAttribute="centerX" secondItem="Zfu-QE-XMW" secondAttribute="centerX" id="frV-Fi-EcI"/>
+                            <constraint firstItem="fLY-Px-f44" firstAttribute="top" secondItem="Zt5-Zc-aDl" secondAttribute="bottom" constant="8" symbolic="YES" id="h1f-Mk-IQG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D6r-2V-Edm" secondAttribute="trailing" constant="25" id="hfu-mU-88r"/>
+                            <constraint firstItem="RMu-B5-SE6" firstAttribute="top" secondItem="Zt5-Zc-aDl" secondAttribute="bottom" constant="223" id="lU9-jm-lov"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DRb-Yo-FbN" secondAttribute="trailing" constant="25" id="nZd-qE-hye"/>
+                            <constraint firstItem="DIh-eW-NXW" firstAttribute="top" secondItem="cTa-jO-Yj9" secondAttribute="bottom" constant="30" id="qxi-E3-Hgb"/>
+                            <constraint firstItem="cTa-jO-Yj9" firstAttribute="leading" secondItem="Zfu-QE-XMW" secondAttribute="leading" id="qyp-oq-c37"/>
+                            <constraint firstItem="Zt5-Zc-aDl" firstAttribute="leading" secondItem="Zfu-QE-XMW" secondAttribute="leadingMargin" constant="19" id="sQe-RB-cBF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DIh-eW-NXW" secondAttribute="trailing" constant="6.5" id="tdB-86-9zD"/>
+                            <constraint firstItem="ncc-aU-rnB" firstAttribute="leading" secondItem="Zfu-QE-XMW" secondAttribute="leadingMargin" constant="37" id="uMk-LM-zdd"/>
+                            <constraint firstItem="D6r-2V-Edm" firstAttribute="leading" secondItem="Zfu-QE-XMW" secondAttribute="leadingMargin" constant="37" id="wh2-sl-HKi"/>
+                            <constraint firstItem="DIh-eW-NXW" firstAttribute="centerX" secondItem="Zfu-QE-XMW" secondAttribute="centerX" id="ye2-Ql-UcJ"/>
+                            <constraint firstItem="DRb-Yo-FbN" firstAttribute="leading" secondItem="Zfu-QE-XMW" secondAttribute="leadingMargin" constant="37" id="zdX-NV-jYD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailResetTextField" destination="D6r-2V-Edm" id="62l-94-hr3"/>
+                        <outlet property="successfulPwResetLbl" destination="fLY-Px-f44" id="q9S-bK-1Fa"/>
+                        <outlet property="unsuccessfulPwResetLbl" destination="ncc-aU-rnB" id="RBg-8O-E3y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yge-Rq-5dr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613" y="-719"/>
+            <point key="canvasLocation" x="611.25" y="-719.36619718309862"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="HCa-mP-7m9">
