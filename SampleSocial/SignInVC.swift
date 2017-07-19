@@ -29,7 +29,7 @@ class SignInVC: UIViewController {
         
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in // Auth with FB method
             if error != nil {
-                print("AARON: Unable to authenticate with facebook - \(error)")
+                print("AARON: Unable to authenticate with facebook - \(String(describing: error))")
             } else if result?.isCancelled == true {
                 print("AARON: User Canceled FB authentication")
             } else {
@@ -44,7 +44,7 @@ class SignInVC: UIViewController {
         
         Auth.auth().signIn(with: credential) { (user, error) in
             if error != nil {
-                print("Unable to auth with Firebase - \(error)")
+                print("Unable to auth with Firebase - \(String(describing: error))")
             } else {
                 print("Successfully auth with Firebase")
             }
