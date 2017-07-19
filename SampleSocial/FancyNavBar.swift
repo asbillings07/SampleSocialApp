@@ -1,16 +1,14 @@
 //
-//  TopView.swift
+//  FancyNavBar.swift
 //  SampleSocial
 //
-//  Created by Aaron Billings on 7/13/17.
+//  Created by Aaron Billings on 7/19/17.
 //  Copyright © 2017 Aaron Billings. All rights reserved.
 //
 
 import UIKit
 
-class TopView: UIView {
-    
-    
+class FancyNavBar: UINavigationBar {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +18,7 @@ class TopView: UIView {
         layer.shadowRadius = 5.0
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         layer.cornerRadius = 2.0
+
     }
-  
+
 }
