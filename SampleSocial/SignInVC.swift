@@ -13,13 +13,20 @@ import FBSDKLoginKit
 import Firebase
 import SwiftKeychainWrapper
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: CustomTextField!
 
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
       
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     override func viewDidAppear(_ animated: Bool) { // Segues should always be in view did appear!!!
@@ -89,7 +96,7 @@ class SignInVC: UIViewController {
                 }
             })
         }
-        
+       
         
     }
     
@@ -102,15 +109,8 @@ class SignInVC: UIViewController {
     }
     
     @IBAction func resetPwdBtnPressed(_ sender: Any) {
-        
-        Auth.auth().sendPasswordReset(withEmail: "") { (error) in
-            if error != nil {
-                print("Successfully sent Password reset email")
-            } else {
-                print("Did not send password due to \(String(describing: error))")
-            }
-        }
-        
+     
+        performSegue(withIdentifier: "goToResetPassword", sender: nil)
     }
 }
 
