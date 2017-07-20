@@ -10,7 +10,7 @@ import UIKit
 
 class FacebookImageView: UIImageView {
 
-    @IBInspectable var cornerRadius: CGFloat = 50.00 {
+    @IBInspectable var cornerRadius: CGFloat = 50.00 { // Different way to create circle
         didSet {
             setupView()
         }

@@ -14,6 +14,7 @@
 		ACD0C0C81F1F947E00408653 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C0C71F1F947E00408653 /* FeedVC.swift */; };
 		ACD0C0CC1F1FB2D500408653 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C0CB1F1FB2D500408653 /* ResetPasswordVC.swift */; };
 		ACD0C0CE1F1FE1F800408653 /* FancyNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C0CD1F1FE1F800408653 /* FancyNavBar.swift */; };
+		ACD0C0D01F20D7D100408653 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C0CF1F20D7D100408653 /* CircleImageView.swift */; };
 		ACE067531F168928007FDC15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE067521F168928007FDC15 /* AppDelegate.swift */; };
 		ACE067551F168928007FDC15 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE067541F168928007FDC15 /* SignInVC.swift */; };
 		ACE067581F168928007FDC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE067561F168928007FDC15 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		ACD0C0C71F1F947E00408653 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		ACD0C0CB1F1FB2D500408653 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		ACD0C0CD1F1FE1F800408653 /* FancyNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyNavBar.swift; sourceTree = "<group>"; };
+		ACD0C0CF1F20D7D100408653 /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		ACE0674F1F168928007FDC15 /* SampleSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE067521F168928007FDC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE067541F168928007FDC15 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				ACD0C0BF1F1CE7C100408653 /* CustomTextField.swift */,
 				ACD0C0C11F1CEA0000408653 /* CustomSignIn.swift */,
 				ACD0C0CD1F1FE1F800408653 /* FancyNavBar.swift */,
+				ACD0C0CF1F20D7D100408653 /* CircleImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				ACD0C0CC1F1FB2D500408653 /* ResetPasswordVC.swift in Sources */,
 				ACD0C0C21F1CEA0000408653 /* CustomSignIn.swift in Sources */,
 				ACD0C0C01F1CE7C100408653 /* CustomTextField.swift in Sources */,
+				ACD0C0D01F20D7D100408653 /* CircleImageView.swift in Sources */,
 				ACD0C0CE1F1FE1F800408653 /* FancyNavBar.swift in Sources */,
 				ACD0C0BC1F18175800408653 /* Constants.swift in Sources */,
 				ACE067711F18001D007FDC15 /* CircleButton.swift in Sources */,
