@@ -1,19 +1,16 @@
 //
-//  CircleButton.swift
+//  CircleImageView.swift
 //  SampleSocial
 //
-//  Created by Aaron Billings on 7/13/17.
+//  Created by Aaron Billings on 7/20/17.
 //  Copyright © 2017 Aaron Billings. All rights reserved.
 //
 
 import UIKit
 
-class CircleButton: UIButton {
+class CircleImageView: UIImageView {
 
-    
-    
     override func awakeFromNib() {
-        
         super.awakeFromNib()
         
         layer.shadowRadius = 5.0
@@ -29,8 +26,5 @@ class CircleButton: UIButton {
         layer.cornerRadius = self.frame.width / 2 // Easy code for a circle
         
     }
-    
 
-
-    
 }
