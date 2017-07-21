@@ -27,7 +27,7 @@ class CircleButton: UIButton {
         super.layoutSubviews()
         
         layer.cornerRadius = self.frame.width / 2 // Easy code for a circle
-        
+        clipsToBounds = true
     }
     
 
