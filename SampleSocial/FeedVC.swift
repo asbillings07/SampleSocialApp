@@ -10,13 +10,15 @@ import UIKit
 import SwiftKeychainWrapper
 import Firebase
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var addImage: CircleImageView!
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var addCaptionTextField: UITextField!
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
     
     
     override func viewDidLoad() {
@@ -25,6 +27,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         tableView.delegate = self
         tableView.dataSource = self
         self.addCaptionTextField.delegate = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
@@ -76,6 +82,18 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
       
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let img = info[UIImagePickerControllerEditedImage] as? UIImage {
+            addImage.image = img
+            
+        } else {
+            print("AARON: A valid image was not selected")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     
     
@@ -102,6 +120,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         }
         performSegue(withIdentifier: "goToSignIn", sender: nil)
       
+    }
+    @IBAction func addImageTapped(_ sender: Any) {
+      
+         present(imagePicker, animated: true, completion: nil)
     }
 
 }
