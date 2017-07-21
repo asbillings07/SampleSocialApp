@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC28E59A1F222DAB00388ABF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28E5991F222DAB00388ABF /* Post.swift */; };
+		AC28E59C1F22736100388ABF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28E59B1F22736100388ABF /* Profile.swift */; };
 		ACD0C0BC1F18175800408653 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C0BB1F18175800408653 /* Constants.swift */; };
 		ACD0C0BE1F18E53E00408653 /* FacebookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C0BD1F18E53E00408653 /* FacebookImageView.swift */; };
 		ACD0C0C01F1CE7C100408653 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C0BF1F1CE7C100408653 /* CustomTextField.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		73A60E6B91CB24D0217A643E /* Pods-SampleSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleSocial/Pods-SampleSocial.release.xcconfig"; sourceTree = "<group>"; };
 		AC28E5991F222DAB00388ABF /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		AC28E59B1F22736100388ABF /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		ACD0C0BB1F18175800408653 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACD0C0BD1F18E53E00408653 /* FacebookImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookImageView.swift; sourceTree = "<group>"; };
 		ACD0C0BF1F1CE7C100408653 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				ACD0C0BB1F18175800408653 /* Constants.swift */,
 				AC28E5991F222DAB00388ABF /* Post.swift */,
+				AC28E59B1F22736100388ABF /* Profile.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				ACD0C0D01F20D7D100408653 /* CircleImageView.swift in Sources */,
 				ACD0C0CE1F1FE1F800408653 /* FancyNavBar.swift in Sources */,
 				ACD0C0BC1F18175800408653 /* Constants.swift in Sources */,
+				AC28E59C1F22736100388ABF /* Profile.swift in Sources */,
 				AC28E59A1F222DAB00388ABF /* Post.swift in Sources */,
 				ACE067711F18001D007FDC15 /* CircleButton.swift in Sources */,
 				ACE067551F168928007FDC15 /* SignInVC.swift in Sources */,

@@ -17,8 +17,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     
     @IBOutlet weak var addCaptionTextField: UITextField!
     
+
+  
+    
     var posts = [Post]()
+
     var imagePicker: UIImagePickerController!
+    var imageSelected = false
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
     
@@ -80,8 +85,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         } else {
             cell.configureCell(post: post, img: nil)
             
-            return cell
+            
             }
+            return cell
             
         }
         return PostCell()
@@ -92,6 +98,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         
         if let img = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImage.image = img
+            imageSelected = true
             
         } else {
             print("AARON: A valid image was not selected")
@@ -130,6 +137,57 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     @IBAction func addImageTapped(_ sender: Any) {
       
          present(imagePicker, animated: true, completion: nil)
+    }
+    @IBAction func postBtnPressed(_ sender: Any) {
+        
+        guard let caption = addCaptionTextField.text, caption != "" else {
+            print("AARON: Caption Must be entered")
+            return
+        }
+        guard let img = addImage.image, imageSelected == true else {
+            print("AARON: An Image Must be Selected")
+            return
+        }
+        if let imageData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imgUID = NSUUID().uuidString
+            let metaData = StorageMetadata()
+            metaData.contentType = "image/Jpeg"
+            
+            DataService.ds.REF_POST_IMGS.child(imgUID).putData(imageData, metadata: metaData) { (metaData, error) in
+                
+                if error != nil {
+                    print("AARON: Unable to upload image to firebase")
+                } else {
+                    print("AARON: Successfully Uploaded image to Firebase Storage")
+                    let downloadUrl = metaData?.downloadURL()?.absoluteString
+                    if let url = downloadUrl {
+                        self.postToFirebase(imgUrl: url)
+                    }
+                    
+                }
+            }
+            
+            
+        }
+    }
+    
+    func postToFirebase(imgUrl: String) {
+        
+        let post: Dictionary<String, AnyObject> = [
+        
+            "caption": addCaptionTextField.text as AnyObject,
+            "imageUrl": imgUrl as AnyObject,
+            "likes": 0 as AnyObject
+        ]
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        addCaptionTextField.text = ""
+        imageSelected = false
+        addImage.image = UIImage(named: "add-image")
+        
+        tableView.reloadData()
     }
 
 }
