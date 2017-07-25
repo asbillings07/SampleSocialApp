@@ -44,24 +44,37 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in // Auth with FB method
             if error != nil {
-                print("AARON: Unable to authenticate with facebook - \(String(describing: error))")
+                self.notifyUser("Error with Facebook Login", message: "Unable to authenticate with facebook - \(String(describing: error))")
             } else if result?.isCancelled == true {
-                print("AARON: User Canceled FB authentication")
+                self.notifyUser("Authentication Canceled", message: "Facebook Authentication has been canceled")
             } else {
-                print("AARON: Successfully authenticated with FB")
+                self.notifyUser("Authentication Successful", message: "Facebook Authentication is successful")
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuthenticate(credential)
             }
         }
+    }
+    
+    func notifyUser(_ title: String, message: String) -> Void
+    {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .cancel, handler: nil)
+        
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
     }
 
     func firebaseAuthenticate(_ credential: AuthCredential) { // Auth with Firebase function
         
         Auth.auth().signIn(with: credential) { (user, error) in
             if error != nil {
-                print("Unable to auth with Firebase - \(String(describing: error))")
+                self.notifyUser("Email Authentication", message: "Unable to authenticate email - \(String(describing: error))")
             } else {
-                print("Successfully auth with Firebase")
+                self.notifyUser("Email Authentication", message: "Successfully authenticated with email")
                 
                 if let user = user {
                     let userData = ["provider": credential.provider]

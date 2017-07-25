@@ -41,12 +41,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
-                    print("SNAP:\(snap)")
+                    
                     
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
                         self.posts.append(post)
+                       
                     }
                 }
                 
@@ -80,19 +81,20 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
             
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, img: img)
-                return cell
+                
+                
             
         } else {
-            cell.configureCell(post: post, img: nil)
-            
+            cell.configureCell(post: post)
+           
             
             }
             return cell
             
-        }
+        } else {
         return PostCell()
     }
-    
+    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
@@ -141,11 +143,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     @IBAction func postBtnPressed(_ sender: Any) {
         
         guard let caption = addCaptionTextField.text, caption != "" else {
-            print("AARON: Caption Must be entered")
+            notifyUser("Caption Required", message: "A caption must be entered before you can post")
             return
         }
         guard let img = addImage.image, imageSelected == true else {
-            print("AARON: An Image Must be Selected")
+            notifyUser("Image Required", message: "An image must be selected before you can post")
             return
         }
         if let imageData = UIImageJPEGRepresentation(img, 0.2) {
@@ -172,6 +174,19 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         }
     }
     
+    func notifyUser(_ title: String, message: String) -> Void
+    {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .cancel, handler: nil)
+        
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func postToFirebase(imgUrl: String) {
         
         let post: Dictionary<String, AnyObject> = [
@@ -188,6 +203,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         addImage.image = UIImage(named: "add-image")
         
         tableView.reloadData()
+    }
+    @IBAction func profileBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToProfile", sender: nil)
     }
 
 }

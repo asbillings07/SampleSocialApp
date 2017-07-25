@@ -13,19 +13,30 @@ import SwiftKeychainWrapper
 class ResetPasswordVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailResetTextField: UITextField!
     
-    @IBOutlet weak var successfulPwResetLbl: UILabel!
-    
-    @IBOutlet weak var unsuccessfulPwResetLbl: UILabel!
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     successfulPwResetLbl.isHidden = true
-    unsuccessfulPwResetLbl.isHidden = true
+    
         self.emailResetTextField.delegate = self
         
         
     }
+    
+    func notifyUser(_ title: String, message: String) -> Void
+    {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .cancel, handler: nil)
+        
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -38,17 +49,14 @@ class ResetPasswordVC: UIViewController, UITextFieldDelegate {
             
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
             if error == nil {
-            self.successfulPwResetLbl.isHidden = false
+            self.notifyUser("Password Reset Successful", message: "Password Successfully Sent, Please check your email")
             } else {
-                self.unsuccessfulPwResetLbl.text = "Password Reset email was not sent due to \(String(describing: error))"
-            }
+                self.notifyUser("Password Reset Unsuccesful", message: "Password Reset email was not sent due to \(String(describing: error))"
+            )}
             }
         }
         
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            self.view.endEditing(true)
-            return false
-        }
+        
         
     }
     

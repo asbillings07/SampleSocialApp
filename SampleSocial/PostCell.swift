@@ -36,7 +36,7 @@ class PostCell: UITableViewCell {
         likesRef = DataService.ds.REF_USERS_CURRENT.child("likes").child(post.postKey)
         self.caption.text = post.caption
         self.likesLbl.text = "\(post.likes)"
-  //      self.userNameLbl.text = profile.username
+      // self.userNameLbl.text = profile.username
         
    //     if profileImg != nil {
     //        self.profileImage.image = profileImg

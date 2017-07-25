@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 
 class Profile {
@@ -14,7 +15,16 @@ class Profile {
     private var _profileImageUrl: String!
     private var _username: String!
     private var _profileKey: String!
+    private var _emailAddress: String!
+    private var _phoneNumber: String!
     
+    var emailAddress: String {
+        return _emailAddress
+    }
+    
+    var phoneNumber: String {
+        return _phoneNumber
+    }
     
     var profileImageUrl: String {
         return _profileImageUrl
@@ -27,28 +37,10 @@ class Profile {
     var profileKey: String {
         return _profileKey
     }
+   
     
     
-    init(profileImageUrl: String, username: String) {
-        
-        self._profileImageUrl = profileImageUrl
-        self._username = username
-    }
-    
-    init(profileKey: String, profileData: Dictionary<String, AnyObject>) {
-        
-        self._profileKey = profileKey
-        
-        if let username = profileData["username"] as? String {
-            self._username = username
-        }
-        
-        if let profileImageUrl = profileData["profileImageUrl"] as? String {
-            self._profileImageUrl = profileImageUrl
-        }
-        
        
 
     }
     
-}
